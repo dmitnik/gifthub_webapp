@@ -172,11 +172,6 @@ class _AdsAndStoresWidgetState extends State<AdsAndStoresWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyText1,
                                       ),
-                                      Text(
-                                        listViewAdsRecord.storeName,
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyText1,
-                                      ),
                                     ],
                                   ),
                                 ],
