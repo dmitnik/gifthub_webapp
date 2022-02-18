@@ -124,7 +124,7 @@ class _NavBarPageState extends State<NavBarPage> {
         onTap: (i) => setState(() => _currentPage = tabs.keys.toList()[i]),
         backgroundColor: Colors.white,
         selectedItemColor: FlutterFlowTheme.of(context).primaryBackground,
-        unselectedItemColor: Color(0x00000000),
+        unselectedItemColor: FlutterFlowTheme.of(context).primaryColor,
         selectedBackgroundColor: FlutterFlowTheme.of(context).primaryColor,
         borderRadius: 0,
         itemBorderRadius: 0,
@@ -141,7 +141,7 @@ class _NavBarPageState extends State<NavBarPage> {
                   Icons.home_outlined,
                   color: currentIndex == 0
                       ? FlutterFlowTheme.of(context).primaryBackground
-                      : Color(0x00000000),
+                      : FlutterFlowTheme.of(context).primaryColor,
                   size: 24,
                 ),
                 Text(
@@ -150,7 +150,7 @@ class _NavBarPageState extends State<NavBarPage> {
                   style: TextStyle(
                     color: currentIndex == 0
                         ? FlutterFlowTheme.of(context).primaryBackground
-                        : Color(0x00000000),
+                        : FlutterFlowTheme.of(context).primaryColor,
                     fontSize: 11.0,
                   ),
                 ),
@@ -165,7 +165,7 @@ class _NavBarPageState extends State<NavBarPage> {
                   Icons.account_circle,
                   color: currentIndex == 1
                       ? FlutterFlowTheme.of(context).primaryBackground
-                      : Color(0x00000000),
+                      : FlutterFlowTheme.of(context).primaryColor,
                   size: 24,
                 ),
                 Text(
@@ -174,7 +174,7 @@ class _NavBarPageState extends State<NavBarPage> {
                   style: TextStyle(
                     color: currentIndex == 1
                         ? FlutterFlowTheme.of(context).primaryBackground
-                        : Color(0x00000000),
+                        : FlutterFlowTheme.of(context).primaryColor,
                     fontSize: 11.0,
                   ),
                 ),
