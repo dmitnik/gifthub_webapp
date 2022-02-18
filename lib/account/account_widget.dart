@@ -18,6 +18,23 @@ class _AccountWidgetState extends State<AccountWidget> {
     return Scaffold(
       key: scaffoldKey,
       backgroundColor: Color(0xFFF5F5F5),
+      body: SafeArea(
+        child: GestureDetector(
+          onTap: () => FocusScope.of(context).unfocus(),
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Text(
+                'Hello World',
+                textAlign: TextAlign.center,
+                style: FlutterFlowTheme.of(context).bodyText1,
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
