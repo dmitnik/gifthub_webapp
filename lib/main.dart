@@ -123,15 +123,15 @@ class _NavBarPageState extends State<NavBarPage> {
         currentIndex: currentIndex,
         onTap: (i) => setState(() => _currentPage = tabs.keys.toList()[i]),
         backgroundColor: Colors.white,
-        selectedItemColor: Color(0x00000000),
+        selectedItemColor: FlutterFlowTheme.of(context).primaryBackground,
         unselectedItemColor: Color(0x00000000),
-        selectedBackgroundColor: Color(0x00000000),
-        borderRadius: 8,
-        itemBorderRadius: 8,
+        selectedBackgroundColor: FlutterFlowTheme.of(context).primaryColor,
+        borderRadius: 16,
+        itemBorderRadius: 16,
         margin: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
         padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
-        width: double.infinity,
-        elevation: 0,
+        width: MediaQuery.of(context).size.width * 1,
+        elevation: 8,
         items: [
           FloatingNavbarItem(
             customWidget: Column(
@@ -139,8 +139,9 @@ class _NavBarPageState extends State<NavBarPage> {
               children: [
                 Icon(
                   Icons.home_outlined,
-                  color:
-                      currentIndex == 0 ? Color(0x00000000) : Color(0x00000000),
+                  color: currentIndex == 0
+                      ? FlutterFlowTheme.of(context).primaryBackground
+                      : Color(0x00000000),
                   size: 24,
                 ),
                 Text(
@@ -148,7 +149,7 @@ class _NavBarPageState extends State<NavBarPage> {
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
                     color: currentIndex == 0
-                        ? Color(0x00000000)
+                        ? FlutterFlowTheme.of(context).primaryBackground
                         : Color(0x00000000),
                     fontSize: 11.0,
                   ),
@@ -162,8 +163,9 @@ class _NavBarPageState extends State<NavBarPage> {
               children: [
                 Icon(
                   Icons.account_circle,
-                  color:
-                      currentIndex == 1 ? Color(0x00000000) : Color(0x00000000),
+                  color: currentIndex == 1
+                      ? FlutterFlowTheme.of(context).primaryBackground
+                      : Color(0x00000000),
                   size: 24,
                 ),
                 Text(
@@ -171,7 +173,7 @@ class _NavBarPageState extends State<NavBarPage> {
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
                     color: currentIndex == 1
-                        ? Color(0x00000000)
+                        ? FlutterFlowTheme.of(context).primaryBackground
                         : Color(0x00000000),
                     fontSize: 11.0,
                   ),
